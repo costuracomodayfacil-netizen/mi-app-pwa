@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Mi Primera App</title>
+		<meta charset="utf-8">
+		
+		<!-- 1. Vital para que se adapte al tamaño de pantalla del celular -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- 2. Color de la barra superior del celular -->
+		<meta name="theme-color" content="#000000">
+		
+		<!-- 3. Conecta tu archivo de configuración PWA -->
+		<link rel="manifest" href="manifest.json">
+		
+		<!-- Tu hoja de estilos (recuerda agregarle .css) -->
+		<link rel="stylesheet" type="text/css" href="cosita.css">
+	</head>
+	<body>
+		<h1>Hola mundo</h1>
+
+		<!-- 4. Activa el modo aplicación y funcionamiento sin internet -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('sw.js');
+			}
+		</script>
+	</body>
+</html>
